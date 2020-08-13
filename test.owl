@@ -1,0 +1,762 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/ifitkau/Test/master/fsBerlin-1.0.0.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="obda" IRI="https://w3id.org/obda/vocabulary#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Classification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Requirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#UtilisationUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasClassification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGeneralAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasUtilisationUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesGeneralAttribute"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding2"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasClassification"/>
+            <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasRequirement"/>
+            <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Requirement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+            <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Classification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesGeneralAttribute"/>
+            <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesGeneralAttribute"/>
+            <ObjectIntersectionOf>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:int"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataHasValue>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+                </DataHasValue>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesGeneralAttribute"/>
+            <ObjectIntersectionOf>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:int"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataHasValue>
+                    <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+                </DataHasValue>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesGeneralAttribute"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectIntersectionOf>
+                        <DataAllValuesFrom>
+                            <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                            <DatatypeRestriction>
+                                <Datatype abbreviatedIRI="xsd:double"/>
+                                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+                                </FacetRestriction>
+                            </DatatypeRestriction>
+                        </DataAllValuesFrom>
+                        <DataAllValuesFrom>
+                            <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                            <DatatypeRestriction>
+                                <Datatype abbreviatedIRI="xsd:int"/>
+                                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+                                </FacetRestriction>
+                            </DatatypeRestriction>
+                        </DataAllValuesFrom>
+                    </ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:double"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:double"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:int"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Location"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Classification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#UtilisationUnit"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Classification"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasClassification"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">300.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">6.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#TestBuilding2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasClassification"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGeneralAttribute"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasLocation"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasClassification"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasUtilisationUnit"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasClassification"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesGeneralAttribute"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#usesAttribute"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+        <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#GeneralAttribute"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+            </ClassAtom>
+            <BuiltInAtom IRI="http://swrl.stanford.edu/ontologies/built-ins/5.0.0/tbox.owl#dpda">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#c"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#c"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>BuildingClass2</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>BuildingClass1</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#isFreestanding"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>BuildingClass3 - 2</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>BuildingClass3 - 1</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#Building"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasNumberOfUtilisationUnit"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#uu"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">400.0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasGrossFloorArea"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#gf"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasBuildingClass"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#b"/>
+                <NamedIndividual IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass3"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#bc"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#bc"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="https://raw.githubusercontent.com/ifitkau/Test#BuildingClass1"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#bc"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="https://raw.githubusercontent.com/ifitkau/Test#hasHeight"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#bc"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#bc"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#h"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <BuiltInAtom IRI="http://swrl.stanford.edu/ontologies/built-ins/5.0.0/tbox.owl#sca">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#BuildingClass1"/>
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#c"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select">
+                <Variable IRI="http://www.semanticweb.org/isabellefitkau/fsBerlin#c"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.12.2019-05-06T20:49:08Z) https://github.com/owlcs/owlapi -->
+
